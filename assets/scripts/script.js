@@ -1,9 +1,7 @@
 // Get a city's current and 5-Day weather conditions.
-let apiKey = "d76a8b5f0df9103baa48be1d4226c871";
-
 let getWeatherData = function(city){
     let lat, lon;
-    let queryGeoCode = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+    let queryGeoCode = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${moon}`;
 
     fetch(queryGeoCode)
     .then(function (response) {
@@ -15,7 +13,7 @@ let getWeatherData = function(city){
         console.log(lat);
         lon = data[0].lon;     // Get the longitude of the city
         console.log(lon);
-        let query5DayForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+        let query5DayForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${moon}`;
         console.log(query5DayForecast);
         fetch(query5DayForecast)
             .then(function(response){
