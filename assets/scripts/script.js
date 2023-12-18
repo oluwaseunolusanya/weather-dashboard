@@ -1,4 +1,5 @@
 // Get a city's current and 5-Day weather conditions.
+let moon = "76abde75d1168bb67e4d5acfb26fe684";
 let getWeatherData = function(city){
     let lat, lon;
     let queryGeoCode = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${moon}`;
